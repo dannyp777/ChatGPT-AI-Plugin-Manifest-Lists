@@ -17,7 +17,7 @@ A collection of links to ChatGPT/AI "*/.well-known/ai-plugin.json", "*/.well-kno
 4. Navigate to the ChatGPT plugin store via the plugin drop-down
 5. You should see a GET request to chat.openai.com for a json file.
    Click on it.
-6. A new sub-panel will open when you can view the HTTP headers, request and response
+6. A new sub-panel will open where you can view the HTTP headers, request and response
 7. Right click on the GET request row for the request and select Copy Value--> Copy as cURL
 8. Paste it into a notepad and change the limit to a large number (I used 1000) and ensure offset=0
 9. Copy the cURL request into your shell. (obviously if you don't have cURL you will need to install it) You will want to redirect the output into a json file, otherwise you have ~245kb of data piped straight into your shell stdout.
