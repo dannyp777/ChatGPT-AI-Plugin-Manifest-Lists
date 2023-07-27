@@ -1,0 +1,172 @@
+➤ YN0000: ┌ Resolution step
+➤ YN0061: │ request@npm:2.88.2 is deprecated: request has been deprecated, see https://github.com/request/request/issues/3142
+➤ YN0061: │ har-validator@npm:5.1.5 is deprecated: this library is no longer supported
+➤ YN0061: │ uuid@npm:3.4.0 is deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+➤ YN0000: └ Completed in 2s 624ms
+➤ YN0000: ┌ Fetch step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 0s 525ms
+➤ YN0000: Done with warnings in 3s 208ms
+
+Node
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "id",
+          "domain",
+          "namespace",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "namespace": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "manifest": {
+            "type": "object",
+            "properties": {
+              "schema_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name_for_model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name_for_human": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description_for_model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description_for_human": {
+                "type": "string",
+                "minLength": 1
+              },
+              "auth": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              },
+              "api": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "url": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "type",
+                  "url"
+                ]
+              },
+              "logo_url": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contact_email": {
+                "type": "string",
+                "minLength": 1
+              },
+              "legal_info_url": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "schema_version",
+              "name_for_model",
+              "name_for_human",
+              "description_for_model",
+              "description_for_human",
+              "auth",
+              "api",
+              "logo_url",
+              "contact_email",
+              "legal_info_url"
+            ]
+          },
+          "oauth_client_id": {},
+          "user_settings": {
+            "type": "object",
+            "properties": {
+              "is_installed": {
+                "type": "boolean"
+              },
+              "is_authenticated": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "is_installed",
+              "is_authenticated"
+            ]
+          },
+          "categories": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "count": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "items",
+    "count"
+  ]
+}
